@@ -1,0 +1,33 @@
+<html ng-app="myApp">
+
+<head>
+    <script data-require="angular.js@*" data-semver="1.3.0-beta.5" src="https://code.angularjs.org/1.3.0-beta.5/angular.js"></script>
+    <script src="../../js/dygraphs-directive.js"></script>
+    <script src="http://dygraphs.com/1.0.1/dygraph-combined.js"></script>
+
+</head>
+
+<body ng-controller="MyCtrl">
+    <dygraphs  data="graph.data" opts="graph.opts" tyle="width:400px;height:300px;border:1px solid red;display:block"></dygraphs>
+
+    <script type="text/javascript">
+        var myApp = angular.module('myApp', ["dygraphs-directive"]);
+
+        myApp.controller('MyCtrl', function($scope) {
+            $scope.graph = {
+                data: [
+                    [new Date(2010,0,1), 10, 100],
+                    [new Date(2011,0,1), 20, 80],
+                    [new Date(2012,0,1), 50, 60],
+                    [new Date(2013,0,1), 70, 80]
+                ],
+                opts: {
+                    labels: ["x", "A", "B"]
+                }
+
+            } ;
+        });
+    </script>
+</body>
+
+</html>
