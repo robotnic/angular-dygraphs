@@ -69,7 +69,7 @@ At the moment the project is just a copy of a stackoverflow answer.
 <pre>
 
             &lt;div ng-app="<span style="color:red">Examples</span>" ng-controller="<span style="color:green">ChartController</span>">
-                &lt;dygraphs data="graph.data" opts="graph.opts" >&lt;/dygraphs>
+                &lt;dygraphs data="<span style="color:blue">graph</span>.data" opts="<span style="color:blue">graph</span>.opts" >&lt;/dygraphs>
             &lt;/div>
 </pre>
 <br/>
@@ -79,7 +79,7 @@ At the moment the project is just a copy of a stackoverflow answer.
     var myApp = angular.module('<span style="color:red">Examples</span>', ["dygraphs-directive"]);
 
     myApp.controller('<span style="color:green">ChartController</span>', function($scope) {
-    $scope.graph = {
+    $scope.<span style="color:blue">graph</span> = {
         data: [
             [new Date(2014, 0, 1), 10, 100],
             [new Date(2014, 1, 1), 20, 80],
