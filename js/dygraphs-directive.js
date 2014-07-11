@@ -10,6 +10,9 @@ angular.module("dygraphs-directive", [])
             link: function(scope, elem, attrs) {
 
                 var graph = new Dygraph(elem.children()[0], scope.data, scope.opts);
+                scope.$watch("data",function(){
+                    graph.updateOptions({file:scope.data});
+                },true);
             }
         };
     });
