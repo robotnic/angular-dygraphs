@@ -58,11 +58,35 @@ At the moment the project is just a copy of a stackoverflow answer.
             <div ng-app="Examples" ng-controller="ChartController">
                 <dygraphs data="graph.data" opts="graph.opts" tyle="width:400px;height:300px;border:1px solid red;display:block"></dygraphs>
             </div>
+<br/>
+<br/>
 <pre>
 
             &lt;div ng-app="Examples" ng-controller="ChartController">
                 &lt;dygraphs data="graph.data" opts="graph.opts" >&lt;/dygraphs>
             &lt;/div>
+</pre>
+<br/>
+<br/>
+<br/>
+<pre>
+    var myApp = angular.module('Examples', ["dygraphs-directive"]);
+
+    myApp.controller('ChartController', function($scope) {
+    $scope.graph = {
+        data: [
+            [new Date(2014, 0, 1), 10, 100],
+            [new Date(2014, 1, 1), 20, 80],
+            [new Date(2014, 2, 1), 50, 60],
+            [new Date(2014, 3, 1), 70, 80]
+          ],
+         opts: {
+            labels: ["x", "A", "B"]
+            }
+
+        };
+    });
+
 </pre>
 
     </div>
