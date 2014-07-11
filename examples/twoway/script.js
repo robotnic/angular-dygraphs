@@ -17,8 +17,10 @@
       $scope.$watch("graph.meta",function(){
             console.log("zzzzz",$scope.graph.meta);
       });
+      /*
       $scope.zoom=function(from,to){
             console.log("echt jetzt?",arguments,$scope.graph);
 //            $scope.$apply();
       };
+      */
     });
