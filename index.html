@@ -61,13 +61,14 @@ At the moment the project is just a copy of a stackoverflow answer.
             <div ng-app="Examples" ng-controller="ChartController">
                 <dygraphs data="graph.data" opts="graph.opts" tyle="width:400px;height:300px;border:1px solid red;display:block"></dygraphs>
             </div>
+            <br/>
             <h4>zoom the chart</h4>
             On Desktop you can highlight a part of the chart to zoom in. On Touchdevices multitouch zoom is available.
 <br/>
 <br/>
 <pre>
 
-            &lt;div ng-app="Examples" ng-controller="ChartController">
+            &lt;div ng-app="<span style="color:red">Examples</span>" ng-controller="ChartController">
                 &lt;dygraphs data="graph.data" opts="graph.opts" >&lt;/dygraphs>
             &lt;/div>
 </pre>
@@ -75,7 +76,7 @@ At the moment the project is just a copy of a stackoverflow answer.
 <br/>
 <br/>
 <pre>
-    var myApp = angular.module('Examples', ["dygraphs-directive"]);
+    var myApp = angular.module('<span style="color:red">Examples</span>', ["dygraphs-directive"]);
 
     myApp.controller('ChartController', function($scope) {
     $scope.graph = {
