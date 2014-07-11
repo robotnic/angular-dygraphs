@@ -15,6 +15,7 @@ angular.module("dygraphs-directive", [])
                 },true);
                 scope.drawCallback=function(data){
                     var xAxisRange=data.xAxisRange();
+                    if(!scope.view)scope.view={};
                     scope.view.from=xAxisRange[0];
                     scope.view.to=xAxisRange[1];
                     if(!scope.$root.$$phase){
