@@ -18,7 +18,9 @@ angular.module("dygraphs-directive", [])
                     var xAxisRange=data.xAxisRange();
                     scope.meta.from=xAxisRange[0];
                     scope.meta.to=xAxisRange[1];
-                    scope.$apply(scope.zoom());
+                    if(!scope.$root.$$phase){
+                        scope.$apply();
+                    }
                 };
             }
         };

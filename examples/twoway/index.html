@@ -9,9 +9,9 @@
 </head>
 
 <body ng-controller="MyCtrl">
-  <dygraphs zoom="zoom" meta="graph.meta" data="graph.data" opts="graph.opts" tyle="width:400px;height:300px;border:1px solid red;display:block"></dygraphs>
   {{graph.meta.from|date}} -
   {{graph.meta.to|date}}
+  <dygraphs zoom="zoom" meta="graph.meta" data="graph.data" opts="graph.opts" tyle="width:400px;height:300px;border:1px solid red;display:block"></dygraphs>
   <div ng-repeat="data in graph.data">
     <input placeholder="date" ng-model="data[0]" type="date" />
     <input placeholder="val1" ng-model="data[1]" type="number"/>
@@ -19,7 +19,6 @@
 
 
   </div>
-    <input placeholder="date" ng-model="data[2]" />
   <pre>{{graph|json}}</pre>
 
 </body>
