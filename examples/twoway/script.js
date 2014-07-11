@@ -12,7 +12,7 @@
         opts: {
           labels: ["x", "A", "B"]
         },
-        meta:{from:1,to:null}
+        view:{from:null,to:null}
       };
       $scope.$watch("graph.meta",function(){
             console.log("zzzzz",$scope.graph.meta);

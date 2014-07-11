@@ -5,8 +5,7 @@ angular.module("dygraphs-directive", [])
             scope: { // Isolate scope
                 data: '=', // Two-way bind data to local scope
                 opts: '=?', // '?' means optional
-                meta: '=', // '?' means optional
-                zoom: '&' // '?' means optional
+                view: '=' // '?' means optional
             },
             template: "<div></div>", // We need a div to attach graph to
             link: function(scope, elem, attrs) {
@@ -16,8 +15,8 @@ angular.module("dygraphs-directive", [])
                 },true);
                 scope.drawCallback=function(data){
                     var xAxisRange=data.xAxisRange();
-                    scope.meta.from=xAxisRange[0];
-                    scope.meta.to=xAxisRange[1];
+                    scope.view.from=xAxisRange[0];
+                    scope.view.to=xAxisRange[1];
                     if(!scope.$root.$$phase){
                         scope.$apply();
                     }
