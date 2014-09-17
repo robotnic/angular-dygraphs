@@ -5,7 +5,7 @@ angular.module("dygraphs-directive", [])
             scope: { // Isolate scope
                 data: '=', // Two-way bind data to local scope
                 opts: '=?', // '?' means optional
-                view: '=' // '?' means optional
+                view: '=?' // '?' means optional
             },
             template: "<div></div>", // We need a div to attach graph to
             link: function(scope, elem, attrs) {
